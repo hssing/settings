@@ -1,8 +1,14 @@
 alias ls="ls -G"
+alias vim="mvim -v"
 export CLICOLOR=1
 export LSCOLORS=fxgxhxhxcxhxdxcxcxexex
 
-source .git-completion.bash
+#source .git-completion.bash
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+ # . $(brew --prefix)/etc/bash_completion
+#fi
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 export PATH
 export MYBINPATH="/Users/hs/bin/"

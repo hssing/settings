@@ -1,9 +1,40 @@
-syntax enable
-set ts=4
+set nocompatible
+
+set autowrite
+source $VIMRUNTIME/vimrc_example.vim
+set nobackup
+set nowritebackup
+set noundofile
+
+set nowrap
+
+set smartindent
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
-set background=dark
-colors molokai 
 
+set ignorecase
 
-filetype plugin on
-let g:pydiction_location = "/Users/hs/.vim/after/ftplugin/complete-dict"
+set fileencodings=utf-8,ucs-bom,gb18030,default
+set formatoptions+=m
+set formatoptions+=B
+
+set noeb vb t_vb=
+
+let loaded_matchparen = 1
+set guioptions=
+set cursorline
+set encoding=utf-8
+set mouse-=a
+
+let g:netrw_dirhistmax = 0
+
+colorscheme molokai
+
+map <leader>f :FufCoverageFile<CR>
+map <leader>b :FufBuffer<CR>
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "<Tab>"
+let g:acp_behaviorKeywordLength = 1
+let g:acp_behaviorKeywordCommand = "\<C-p>"
