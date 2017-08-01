@@ -38,3 +38,14 @@ map <leader>b :FufBuffer<CR>
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "<Tab>"
 let g:acp_behaviorKeywordLength = 1
 let g:acp_behaviorKeywordCommand = "\<C-p>"
+
+
+
+
+" enable the vbundle plugin tool
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim 
+call vundle#begin()
+Plugin 'L9'
+call vundle#end()
+filetype plugin indent on
