@@ -1,5 +1,7 @@
 alias ls="ls -G"
 alias vim="mvim -v"
+alias frm=/bin/rm
+alias rm=del
 export CLICOLOR=1
 export LSCOLORS=fxgxhxhxcxhxdxcxcxexex
 
@@ -19,3 +21,9 @@ export ANDROID_SDK_ROOTS_ROOT="/Users/hs/env/sdk-ndk/tools"
 export NDK_ROOT="/Users/hs/env/sdk-ndk/ndk-bundle"
 PATH=$PATH:$COCOS_ROOT:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOTS_ROOT:$NDK_ROOT
 
+
+del()
+{
+    echo $@
+    mv $@ /Users/hs/.Trash/
+}
